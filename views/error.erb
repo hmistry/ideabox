@@ -1,0 +1,8 @@
+<title>IdeaBox Error</title>
+<h1>An Error Occured</h1>
+<h3>Params</h3>
+<% request.params.each do |key, value| %>
+  Request Verb:  <%= request.request_method %> <br>
+  Request Path:  <%= request.path %> <br>
+  Parameters:    <%= key %>  <%= value %> <br><br>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>Ideabox</h1>
+<p>Your idea:</p>
+<form action="/" method="POST">
+  <input type="text" name="idea_title"><br>
+  <textarea name="idea_description"></textarea><br>
+  <input type="submit" value="Submit">
+</form>
+
+<h2>Existing Ideas</h2>
+<% ideas.each do |idea| %>
+  <p>
+  <%= idea.title %> <br>
+  <%= idea.description %><br>
+  </p>
+<% end %>
