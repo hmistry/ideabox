@@ -1,0 +1,9 @@
+<h1>Ideabox</h1>
+<h2>Edit Idea</h2>
+<form action="/<%= id %>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+  <input type="text" name="idea_title" value="<%=idea.title%>"><br>
+  <textarea name="idea_description"><%=idea.description%></textarea><br>
+  <input type="submit" value="Submit">
+</form>
+

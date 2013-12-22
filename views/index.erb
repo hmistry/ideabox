@@ -7,9 +7,14 @@
 </form>
 
 <h2>Existing Ideas</h2>
-<% ideas.each do |idea| %>
+<% ideas.each_with_index do |idea,id| %>
   <p>
   <%= idea.title %> <br>
-  <%= idea.description %><br>
+  <%= idea.description %> <br>
+  <a href="/<%= id %>/edit">Edit</a>
+  <form action="/<%= id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete">
+  </form>
   </p>
 <% end %>
